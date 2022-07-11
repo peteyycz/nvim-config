@@ -5,6 +5,8 @@ return require("packer").startup({
 
     -- My plugin <3 :D
     use("peteyycz/mocha.vim")
+
+    use('morhetz/gruvbox')
   end,
 })
 
