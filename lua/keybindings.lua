@@ -53,3 +53,14 @@ vim.api.nvim_create_user_command('Qa', 'qa<bang>', {
 vim.api.nvim_create_user_command('QA', 'qa<bang>', {
   bang = true
 })
+
+-- Mocha vim
+vim.api.nvim_set_keymap('n', '<Leader>mo', ':ToggleOnly<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ms', ':ToggleSkip<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ']t', ':FocusNextTest<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ']t', ':FocusPreviousTest<CR>', { noremap = true, silent = true })
+
+-- Incsearch
+vim.api.nvim_set_keymap('n', '/', '<Plug>(incsearch-forward)', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '?', '<Plug>(incsearch-backward)', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'g/', '<Plug>(incsearch-stay)', { noremap = true, silent = true })

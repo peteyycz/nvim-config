@@ -29,7 +29,6 @@ vim.opt.sidescrolloff = 15
 vim.opt.sidescroll = 3
 
 -- Visual tweaks
--- =============
 vim.opt.cursorcolumn = true -- Highlight the coloumn of the cursor
 vim.opt.number = true -- Display number on the sidebar
 vim.opt.relativenumber = true
@@ -38,7 +37,6 @@ vim.opt.wrap = false
 vim.opt.linebreak = true
 
 -- Real programmers don't use TABs but spaces
--- ==========================================
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
@@ -48,10 +46,12 @@ vim.opt.smartindent = true
 vim.opt.smarttab = true
 
 -- Search tweaks
--- =============
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.gdefault = true -- Set /g flag regex search
 
+-- DelimitMate
+vim.g.delimitMate_expand_cr = 1
+vim.g.delimitMate_expand_space = 1
