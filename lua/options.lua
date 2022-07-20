@@ -37,6 +37,22 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.gdefault = true -- Set /g flag regex search
 
+-- ====================
+-- PLUGIN CONFIGURATION
+-- ====================
+
 -- DelimitMate
 vim.g.delimitMate_expand_cr = 1
 vim.g.delimitMate_expand_space = 1
+
+-- ALE
+vim.g.ale_linters = {
+  javascript = { 'eslint' },
+  typescript = { 'tsserver', 'tslint' },
+}
+vim.g.ale_fixers = {
+  javascript = { 'eslint' },
+  typescript = { 'prettier' },
+  vue = { 'eslint' }
+}
+

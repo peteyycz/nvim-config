@@ -17,6 +17,10 @@ vim.api.nvim_set_keymap('n', '<C-p>', ':GFiles<CR>', { noremap = true, silent = 
 vim.api.nvim_set_keymap('n', '<Leader>ff', ':GFiles<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>fs', ':Rg<CR>', { noremap = true, silent = true })
 
+-- Git
+vim.api.nvim_set_keymap('n', '<Leader>gs', ':GitGutterStageHunk<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>gr', ':GitGutterUndoHunk<CR>', { noremap = true, silent = true })
+
 -- Typo protector lvl: 99999
 vim.api.nvim_create_user_command('E', 'e<bang> <args>', {
   bang = true,
