@@ -62,8 +62,6 @@ return require('packer').startup({
     -- Multiple languages
     use('sheerun/vim-polyglot')
 
-    -- JavaScript
-    use({ 'prettier/vim-prettier', ft = 'javascript' })
     -- My plugin <3 :D
     -- TODO: only run it in javascript ft
     use('peteyycz/mocha.vim')
