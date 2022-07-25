@@ -1,18 +1,18 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 vim.opt.title = true -- Set title of the window
 vim.opt.clipboard = unnamedplus -- Use OS clipboard
-vim.opt.mouse = "a"
+vim.opt.mouse = 'a'
 vim.opt.showmatch = true -- Highlight matching pair
 vim.opt.list = true -- Display invisibles
-vim.opt.listchars = "tab:▸ ,eol:¬,extends:❯,precedes:❮,space:·"
-vim.opt.showbreak = "↪"
+vim.opt.listchars = 'tab:▸ ,eol:¬,extends:❯,precedes:❮,space:·'
+vim.opt.showbreak = '↪'
 vim.opt.visualbell = true -- No noise just flash
 vim.opt.splitbelow = true -- Horizontal splits open below the current window
 vim.opt.splitright = true -- Vertical splits open right to the current window
 vim.opt.termguicolors = true -- Enable true color support in terminal
 vim.opt.autowrite = true
-vim.opt.grepprg = "rg --vimgrep"
-vim.opt.grepformat = "%f:%l:%c:%m"
+vim.opt.grepprg = 'rg --vimgrep'
+vim.opt.grepformat = '%f:%l:%c:%m'
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 15
 vim.opt.sidescroll = 3
@@ -52,7 +52,14 @@ vim.g.ale_linters = {
 }
 vim.g.ale_fixers = {
   javascript = { 'eslint' },
-  typescript = { 'prettier' },
-  vue = { 'eslint' }
+  vue = { 'eslint' },
 }
 
+-- NEOFORMAT
+vim.g.neoformat_try_node_exe = 1
+local fmtGroup = vim.api.nvim_create_augroup('fmt', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePre', {
+  command = 'undojoin | Neoformat',
+  pattern = '*',
+  group = fmtGroup,
+})

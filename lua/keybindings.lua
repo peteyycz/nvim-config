@@ -18,44 +18,54 @@ vim.api.nvim_set_keymap('n', '<Leader>ff', ':GFiles<CR>', { noremap = true, sile
 vim.api.nvim_set_keymap('n', '<Leader>fs', ':Rg<CR>', { noremap = true, silent = true })
 
 -- Git
-vim.api.nvim_set_keymap('n', '<Leader>gs', ':GitGutterStageHunk<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>gr', ':GitGutterUndoHunk<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>gs',
+  ':GitGutterStageHunk<CR>',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>gr',
+  ':GitGutterUndoHunk<CR>',
+  { noremap = true, silent = true }
+)
 
 -- Typo protector lvl: 99999
 vim.api.nvim_create_user_command('E', 'e<bang> <args>', {
   bang = true,
   nargs = '?',
-  complete = "file"
+  complete = 'file',
 })
 vim.api.nvim_create_user_command('W', 'w<bang> <args>', {
   bang = true,
   nargs = '?',
-  complete = "file"
+  complete = 'file',
 })
 vim.api.nvim_create_user_command('Wq', 'wq<bang> <args>', {
   bang = true,
   nargs = '?',
-  complete = "file"
+  complete = 'file',
 })
 vim.api.nvim_create_user_command('WQ', 'wq<bang> <args>', {
   bang = true,
   nargs = '?',
-  complete = "file"
+  complete = 'file',
 })
 vim.api.nvim_create_user_command('Wa', 'wa<bang>', {
-  bang = true
+  bang = true,
 })
 vim.api.nvim_create_user_command('WA', 'wa<bang>', {
-  bang = true
+  bang = true,
 })
 vim.api.nvim_create_user_command('Q', 'q<bang>', {
-  bang = true
+  bang = true,
 })
 vim.api.nvim_create_user_command('Qa', 'qa<bang>', {
-  bang = true
+  bang = true,
 })
 vim.api.nvim_create_user_command('QA', 'qa<bang>', {
-  bang = true
+  bang = true,
 })
 
 -- Mocha vim
