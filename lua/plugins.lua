@@ -44,7 +44,12 @@ return require('packer').startup({
     use('williamboman/nvim-lsp-installer')
     use({
       'neovim/nvim-lspconfig',
-      config = "require'config.lsp'",
+      config = "require('config.lsp')",
+    })
+
+    use({
+      'kyazdani42/nvim-tree.lua',
+      config = "require('nvim-tree').setup({ renderer = { icons = { show = { file = false, folder = false  } } } })",
     })
 
     use('sbdchd/neoformat')
