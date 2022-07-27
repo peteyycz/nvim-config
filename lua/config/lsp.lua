@@ -38,13 +38,20 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
-require('lspconfig').tsserver.setup({
+local nvim_lsp = require('lspconfig')
+
+nvim_lsp.denols.setup({
   on_attach = on_attach,
+  root_dir = nvim_lsp.util.root_pattern('deno.json', 'deno.jsonc'),
+  single_file_support = false,
+})
+
+nvim_lsp.tsserver.setup({
+  on_attach = on_attach,
+  root_dir = nvim_lsp.util.root_pattern('package.json'),
   init_options = {
     preferences = {
       disableSuggestions = true,
     },
   },
 })
-
-require('lspconfig').denols.setup({})
