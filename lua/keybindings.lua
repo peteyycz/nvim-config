@@ -33,6 +33,12 @@ vim.api.nvim_set_keymap(
 
 -- File browser
 vim.api.nvim_set_keymap('n', '<Leader>m', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '<Leader>mf',
+  ':NvimTreeFindFile<CR>',
+  { noremap = true, silent = true }
+)
 
 -- Typo protector lvl: 99999
 vim.api.nvim_create_user_command('E', 'e<bang> <args>', {
