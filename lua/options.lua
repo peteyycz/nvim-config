@@ -1,6 +1,6 @@
 vim.g.mapleader = ' '
 vim.opt.title = true -- Set title of the window
-vim.opt.clipboard = unnamedplus -- Use OS clipboard
+vim.opt.clipboard = 'unnamedplus' -- Use OS clipboard
 vim.opt.mouse = 'a'
 vim.opt.showmatch = true -- Highlight matching pair
 vim.opt.list = true -- Display invisibles
@@ -55,11 +55,13 @@ vim.g.ale_fixers = {
   vue = { 'eslint' },
 }
 
+vim.g.catppuccin_flavour = 'macchiato'
+
 -- NEOFORMAT
 vim.g.neoformat_try_node_exe = 1
 local fmtGroup = vim.api.nvim_create_augroup('fmt', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePre', {
-  command = 'undojoin | Neoformat',
+  command = 'Neoformat',
   pattern = '*',
   group = fmtGroup,
 })

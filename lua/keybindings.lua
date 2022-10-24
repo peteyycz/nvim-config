@@ -87,3 +87,6 @@ vim.api.nvim_set_keymap('n', ']t', ':FocusPreviousTest<CR>', { noremap = true, s
 vim.api.nvim_set_keymap('n', '/', '<Plug>(incsearch-forward)', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '?', '<Plug>(incsearch-backward)', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'g/', '<Plug>(incsearch-stay)', { noremap = true, silent = true })
+
+-- Compile
+vim.api.nvim_set_keymap('n', '<F5>', ':make!<CR>', { noremap = true, silent = true })

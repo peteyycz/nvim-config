@@ -5,6 +5,7 @@ return require('packer').startup({
 
     -- My fav colors
     use('morhetz/gruvbox')
+    use({ "catppuccin/nvim", as = "catppuccin" })
 
     use('machakann/vim-highlightedyank')
 

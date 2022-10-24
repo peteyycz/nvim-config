@@ -55,3 +55,7 @@ nvim_lsp.tsserver.setup({
     },
   },
 })
+
+nvim_lsp.clangd.setup({
+  on_attach = on_attach,
+})
